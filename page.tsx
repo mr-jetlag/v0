@@ -36,15 +36,15 @@ export default function Home() {
             <div className="flex flex-col items-center space-y-4 text-center">
               <div className="space-y-2">
                 <h1 className="text-3xl font-light tracking-wider sm:text-4xl md:text-5xl lg:text-6xl/none">
-                  Welcome to Agos Capital
+                  We are Agos.
                 </h1>
                 <p className="mx-auto max-w-[700px] text-gray-400 md:text-xl">
-                  Your trusted partner in innovative financial solutions and strategic investments.
+                  We believe capital should flow where it's needed most.
                 </p>
               </div>
               <div className="space-x-4">
                 <Button className="bg-blue-600 hover:bg-blue-700 text-white">Learn More</Button>
-                <Button variant="outline" className="text-gray-300 border-gray-700 hover:bg-gray-800">
+                <Button variant="outline" className="text-gray-300 border-gray-700 hover:bg-gray-800" href="mailto:hello@agoscapital.com">
                   Contact Us
                 </Button>
               </div>
@@ -54,7 +54,7 @@ export default function Home() {
         <section id="about" className="w-full py-12 md:py-24 lg:py-32 bg-gray-900">
           <div className="container px-4 md:px-6">
             <h2 className="text-3xl font-light tracking-wider sm:text-4xl md:text-5xl text-center mb-8">
-              About Agos Capital
+              About Us
             </h2>
             <div className="grid gap-6 lg:grid-cols-2 items-center">
               <div className="space-y-4">
@@ -78,7 +78,7 @@ export default function Home() {
                   </li>
                 </ul>
                 <p className="text-gray-300">
-                  Agos Capital operates globally, providing private strategic advisory, consulting and arranging capital
+                  We operate globally, providing private strategic advisory, consulting and arranging capital
                   flows wherever needed.
                 </p>
               </div>
@@ -98,7 +98,7 @@ export default function Home() {
           <div className="container px-4 md:px-6">
             <h2 className="text-3xl font-light tracking-wider sm:text-4xl md:text-5xl text-center mb-8">Our Clients</h2>
             <p className="text-gray-300 text-center mb-8">
-              Agos Capital have provided transformational consulting and advisory services to global firms.
+              We provide transformational consulting and advisory services to global firms.
             </p>
             <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-2">
               <Card className="bg-gray-900 border-gray-800">
@@ -106,7 +106,7 @@ export default function Home() {
                   <CardTitle className="text-gray-100">Investment Portfolio Companies</CardTitle>
                 </CardHeader>
                 <CardContent className="text-gray-300">
-                  <p>CxO or board advisory</p>
+                  <p>CxO or Board Advisory</p>
                 </CardContent>
               </Card>
               <Card className="bg-gray-900 border-gray-800">
@@ -139,7 +139,7 @@ export default function Home() {
               long term impact – up to and including private market exits.
             </p>
             <div className="text-center mt-8">
-              <Button className="bg-blue-600 hover:bg-blue-700 text-white">
+              <Button className="bg-blue-600 hover:bg-blue-700 text-white" href="mailto:investor@agoscapital.com">
                 Contact Us for Advisory
                 <ArrowRight className="ml-2 h-4 w-4" />
               </Button>
@@ -207,26 +207,6 @@ export default function Home() {
       <footer className="flex flex-col gap-2 sm:flex-row py-6 w-full shrink-0 items-center px-4 md:px-6 border-t border-gray-800">
         <p className="text-xs text-gray-400">© 2024 Agos Capital. All rights reserved.</p>
         <nav className="sm:ml-auto flex gap-4 sm:gap-6">
-          <Link
-            className="text-xs text-gray-400 hover:text-blue-400 transition-colors"
-            href="mailto:hello@agoscapital.com"
-          >
-            hello@agoscapital.com
-          </Link>
-          <Link
-            className="text-xs text-gray-400 hover:text-blue-400 transition-colors"
-            href="mailto:investor@agoscapital.com"
-          >
-            investor@agoscapital.com
-          </Link>
-          <Link
-            className="text-xs text-gray-400 hover:text-blue-400 transition-colors"
-            href="https://www.agoscapital.com"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            www.agoscapital.com
-          </Link>
         </nav>
       </footer>
     </div>
