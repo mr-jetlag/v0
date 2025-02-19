@@ -59,7 +59,7 @@ export default function Home() {
             <div className="grid gap-6 lg:grid-cols-2 items-center">
               <div className="space-y-4">
                 <p className="text-gray-300">
-                  AGOS is the Tagalog word for the flow of a river or the ocean current. After decades of work in the
+                  "Agos" is the Tagalog word for the flow of a river or the ocean current. After decades of work in the
                   global capital markets, we at Agos Capital understand that the concept of flow and growth are
                   intimately linked:
                 </p>
