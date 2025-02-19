@@ -42,12 +42,6 @@ export default function Home() {
                   We believe capital should flow where it's needed most.
                 </p>
               </div>
-              <div className="space-x-4">
-                <Button className="bg-blue-600 hover:bg-blue-700 text-white">Learn More</Button>
-                <Button variant="outline" className="text-gray-300 border-gray-700 hover:bg-gray-800" href="mailto:hello@agoscapital.com">
-                  Contact Us
-                </Button>
-              </div>
             </div>
           </div>
         </section>
@@ -139,10 +133,12 @@ export default function Home() {
               long term impact – up to and including private market exits.
             </p>
             <div className="text-center mt-8">
-              <Button className="bg-blue-600 hover:bg-blue-700 text-white" href="mailto:investor@agoscapital.com">
-                Contact Us for Advisory
-                <ArrowRight className="ml-2 h-4 w-4" />
-              </Button>
+              <Link className="flex items-center justify-center" href="mailto:hello@agoscapital.com">
+                <Button className="bg-blue-600 hover:bg-blue-700 text-white">
+                  Contact Us for Advisory
+                  <ArrowRight className="ml-2 h-4 w-4" />
+                </Button>
+              </Link>
             </div>
           </div>
         </section>
@@ -196,10 +192,12 @@ export default function Home() {
               partners.
             </p>
             <div className="text-center mt-8">
-              <Button className="bg-blue-600 hover:bg-blue-700 text-white">
-                Contact Us for Co-Investment
+              <Link className="flex items-center justify-center" href="mailto:investor@agoscapital.com">
+                <Button className="bg-blue-600 hover:bg-blue-700 text-white">
+                  Contact Us for Co-Investment
                 <ArrowRight className="ml-2 h-4 w-4" />
-              </Button>
+                </Button>
+              </Link>
             </div>
           </div>
         </section>
