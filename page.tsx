@@ -38,7 +38,7 @@ export default function Home() {
                 <h1 className="text-3xl font-light tracking-wider sm:text-4xl md:text-5xl lg:text-6xl/none">
                   We are Agos.
                 </h1>
-                <p className="mx-auto max-w-[700px] text-gray-400 md:text-xl">
+                <p className="mx-auto text-gray-400 md:text-xl">
                   We believe capital should flow where it's needed most.
                 </p>
               </div>
