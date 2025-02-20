@@ -57,8 +57,8 @@ export default function Home() {
           <Image
             src={
               darkMode
-                ? "/Agos%20Dark%20Logo-Sisj0KrYxd2TsEI1TanU6PHNQp6VhT.png"
-                : "/Agos%20Light%20Logo-pArHvH4wCElHOcPwLw4tLiqXlxtpUj.png"
+                ? "/AgosDarkLogo.png"
+                : "/AgosLightLogo.png"
             }
             alt="Agos Capital Logo"
             width={50}
