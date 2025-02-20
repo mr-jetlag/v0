@@ -20,7 +20,7 @@ declare global {
 }
 
 export default function Home() {
-  const [darkMode, setDarkMode] = useState(false)
+  const [darkMode, setDarkMode] = useState(true)
   const [showContactForm, setShowContactForm] = useState(false)
   const [formData, setFormData] = useState({ name: "", phone: "", email: "" })
 
@@ -158,17 +158,16 @@ export default function Home() {
           <div className="relative z-10 container mx-auto px-4 md:px-6">
             <div className="max-w-3xl mx-auto text-center space-y-8">
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-light tracking-wider text-white">
-                Welcome to Agos Capital
+                We are Agos.
               </h1>
               <p className="text-xl text-gray-200">
-                Your trusted partner in innovative financial solutions and strategic investments.
+                We believe capital should flow to where it's needed most.
               </p>
               <div className="flex justify-center gap-4">
-                <Button className="bg-blue-600 hover:bg-blue-700 text-white px-8">Learn More</Button>
                 <Button
                   onClick={handleContactClick}
                   variant="outline"
-                  className="text-white border-white hover:bg-white/10 px-8"
+                  className="text-gray border-white hover:bg-white/10 px-8"
                 >
                   Contact Us
                 </Button>
@@ -181,11 +180,11 @@ export default function Home() {
           <div className="container mx-auto px-4 md:px-6">
             <div className="max-w-3xl mx-auto text-center space-y-12">
               <h2 className="text-3xl md:text-4xl font-light tracking-wider text-gray-900 dark:text-gray-100">
-                About Agos Capital
+                About Us:
               </h2>
               <div className="text-left space-y-6">
                 <p className="text-gray-600 dark:text-gray-300">
-                  AGOS is the Tagalog word for the flow of a river or the ocean current. After decades of work in the
+                  "Agos" is the Tagalog word for the flow of a river or the ocean current. After decades of work in the
                   global capital markets, we at Agos Capital understand that the concept of flow and growth are
                   intimately linked:
                 </p>
@@ -220,7 +219,7 @@ export default function Home() {
                   Our Clients
                 </h2>
                 <p className="text-gray-600 dark:text-gray-300">
-                  Agos Capital have provided transformational consulting and advisory services to global firms.
+                  At Agos Capital, we provide transformational consulting and advisory services to global firms.
                 </p>
               </div>
               <div className="grid gap-8 sm:grid-cols-2">
@@ -229,7 +228,7 @@ export default function Home() {
                     <CardTitle className="text-gray-900 dark:text-gray-100">Investment Portfolio Companies</CardTitle>
                   </CardHeader>
                   <CardContent className="text-gray-600 dark:text-gray-300">
-                    <p>CxO or board advisory</p>
+                    <p>CxO or Board Observer</p>
                   </CardContent>
                 </Card>
                 <Card className="dark:bg-gray-800 dark:border-gray-700">
@@ -237,7 +236,7 @@ export default function Home() {
                     <CardTitle className="text-gray-900 dark:text-gray-100">Startup Fintech Firms</CardTitle>
                   </CardHeader>
                   <CardContent className="text-gray-600 dark:text-gray-300">
-                    <p>Product/market fit, direct operation via fractional CxO services</p>
+                    <p>Product/market fit, Direct Operation / Fractional CxO Services</p>
                   </CardContent>
                 </Card>
                 <Card className="dark:bg-gray-800 dark:border-gray-700">
@@ -245,7 +244,7 @@ export default function Home() {
                     <CardTitle className="text-gray-900 dark:text-gray-100">Enterprise SaaS Companies</CardTitle>
                   </CardHeader>
                   <CardContent className="text-gray-600 dark:text-gray-300">
-                    <p>Product advisory, go to market planning, execution</p>
+                    <p>Product Advisory, Go to Market planning, Execution</p>
                   </CardContent>
                 </Card>
                 <Card className="dark:bg-gray-800 dark:border-gray-700">
@@ -253,7 +252,7 @@ export default function Home() {
                     <CardTitle className="text-gray-900 dark:text-gray-100">Global Consultancies</CardTitle>
                   </CardHeader>
                   <CardContent className="text-gray-600 dark:text-gray-300">
-                    <p>Foundational private markets training; deal advisory and assistance with selection</p>
+                    <p>Foundational Private Markets Training; Deal Advisory; Vendor selections</p>
                   </CardContent>
                 </Card>
               </div>
@@ -262,8 +261,12 @@ export default function Home() {
                   Working with clients who share our goals and values, we are able to provide immediate value and
                   meaningful long term impact – up to and including private market exits.
                 </p>
-                <Button className="bg-blue-600 hover:bg-blue-700 text-white px-8">
-                  Contact Us for Advisory
+                <Button
+                  onClick={handleContactClick}
+                  variant="outline"
+                  className="text-gray border-white hover:bg-white/10 px-8"
+                >
+                  Client Advisory
                   <ArrowRight className="ml-2 h-4 w-4" />
                 </Button>
               </div>
@@ -291,7 +294,7 @@ export default function Home() {
                   <CardContent className="text-gray-600 dark:text-gray-300">
                     <p>
                       A publicly listed provider, one of the fastest growing companies in Singapore with expansions into
-                      Australia, the UK and US. Private debt facility.
+                      Australia, the UK and US. <i>Private debt facility.</i>
                     </p>
                   </CardContent>
                 </Card>
@@ -302,7 +305,7 @@ export default function Home() {
                   <CardContent className="text-gray-600 dark:text-gray-300">
                     <p>
                       A pre-seed startup commercialising proprietary AI models from a Tier 1 government deeptech agency.
-                      Angel Round, common equity.
+                      <i>Angel Round, common equity.</i>
                     </p>
                   </CardContent>
                 </Card>
@@ -312,8 +315,8 @@ export default function Home() {
                   </CardHeader>
                   <CardContent className="text-gray-600 dark:text-gray-300">
                     <p>
-                      A disruptive challenger firm supported by the largest ratings, data and analytics firm in the
-                      world. Series A, common equity.
+                      A disruptive CLO challenger firm supported by the largest ratings, data and analytics firm in the
+                      world. <i>Series A, common equity.</i>
                     </p>
                   </CardContent>
                 </Card>
@@ -324,8 +327,12 @@ export default function Home() {
                   only operate or advise companies where direct involvement accelerates outcomes and provides direct
                   value to our partners.
                 </p>
-                <Button className="bg-blue-600 hover:bg-blue-700 text-white px-8">
-                  Contact Us for Co-Investment
+                <Button
+                  onClick={handleContactClick}
+                  variant="outline"
+                  className="text-gray border-white hover:bg-white/10 px-8"
+                >
+                  Co-Investment
                   <ArrowRight className="ml-2 h-4 w-4" />
                 </Button>
               </div>
@@ -337,26 +344,6 @@ export default function Home() {
         <div className="container mx-auto px-4 py-8 flex flex-col sm:flex-row items-center justify-between">
           <p className="text-sm text-gray-600 dark:text-gray-400">© 2024 Agos Capital. All rights reserved.</p>
           <nav className="flex gap-8 mt-4 sm:mt-0">
-            <Link
-              className="text-sm text-gray-600 hover:text-blue-600 dark:text-gray-400 dark:hover:text-blue-400 transition-colors"
-              href="mailto:hello@agoscapital.com"
-            >
-              hello@agoscapital.com
-            </Link>
-            <Link
-              className="text-sm text-gray-600 hover:text-blue-600 dark:text-gray-400 dark:hover:text-blue-400 transition-colors"
-              href="mailto:investor@agoscapital.com"
-            >
-              investor@agoscapital.com
-            </Link>
-            <Link
-              className="text-sm text-gray-600 hover:text-blue-600 dark:text-gray-400 dark:hover:text-blue-400 transition-colors"
-              href="https://www.agoscapital.com"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              www.agoscapital.com
-            </Link>
           </nav>
         </div>
       </footer>
