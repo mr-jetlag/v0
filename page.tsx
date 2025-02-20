@@ -2,7 +2,7 @@
 
 import type React from "react"
 
-import { useState, useEffect } from "react"
+import { useState, useEffect, useRef } from "react"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Input } from "@/components/ui/input"
@@ -11,10 +11,21 @@ import { ArrowRight, Moon, Sun, X } from "lucide-react"
 import Image from "next/image"
 import Link from "next/link"
 
+// Declare YT as a global variable
+declare global {
+  interface Window {
+    YT: any
+    onYouTubeIframeAPIReady: () => void
+  }
+}
+
 export default function Home() {
   const [darkMode, setDarkMode] = useState(false)
   const [showContactForm, setShowContactForm] = useState(false)
   const [formData, setFormData] = useState({ name: "", phone: "", email: "" })
+
+  // Add ref for the video container
+  const videoContainerRef = useRef<HTMLDivElement>(null)
 
   useEffect(() => {
     if (darkMode) {
@@ -23,6 +34,45 @@ export default function Home() {
       document.documentElement.classList.remove("dark")
     }
   }, [darkMode])
+
+  // Effect to handle video positioning
+  useEffect(() => {
+    // Create YouTube Player
+    const tag = document.createElement("script")
+    tag.src = "https://www.youtube.com/iframe_api"
+    const firstScriptTag = document.getElementsByTagName("script")[0]
+    firstScriptTag.parentNode?.insertBefore(tag, firstScriptTag)
+
+    let player: any
+
+    window.onYouTubeIframeAPIReady = () => {
+      player = new window.YT.Player("youtube-player", {
+        videoId: "oYEtLQ3lEH0",
+        playerVars: {
+          autoplay: 1,
+          loop: 1,
+          playlist: "oYEtLQ3lEH0",
+          controls: 0,
+          showinfo: 0,
+          rel: 0,
+          enablejsapi: 1,
+          modestbranding: 1,
+          mute: 1,
+        },
+        events: {
+          onReady: (event: any) => {
+            event.target.playVideo()
+          },
+        },
+      })
+    }
+
+    return () => {
+      if (player) {
+        player.destroy()
+      }
+    }
+  }, [])
 
   const toggleDarkMode = () => {
     setDarkMode(!darkMode)
@@ -57,8 +107,8 @@ export default function Home() {
           <Image
             src={
               darkMode
-                ? "/AgosDarkLogo.png"
-                : "/AgosLightLogo.png"
+                ? "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Agos%20Dark%20Logo-Sisj0KrYxd2TsEI1TanU6PHNQp6VhT.png"
+                : "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Agos%20Light%20Logo-pArHvH4wCElHOcPwLw4tLiqXlxtpUj.png"
             }
             alt="Agos Capital Logo"
             width={50}
@@ -92,13 +142,25 @@ export default function Home() {
         </nav>
       </header>
       <main className="flex-1">
-        <section className="w-full py-24 lg:py-32">
-          <div className="container mx-auto px-4 md:px-6">
+        <section className="relative w-full h-screen min-h-[600px] flex items-center justify-center overflow-hidden">
+          {/* Video Background */}
+          <div className="absolute inset-0 w-full h-full">
+            <div className="relative w-full h-full">
+              <div
+                id="youtube-player"
+                className="absolute top-1/2 left-1/2 w-[100vw] h-[56.25vw] min-h-[100vh] min-w-[177.77vh] -translate-x-1/2 -translate-y-1/2 pointer-events-none"
+              />
+              <div className="absolute inset-0 bg-black/40" /> {/* Overlay */}
+            </div>
+          </div>
+
+          {/* Content */}
+          <div className="relative z-10 container mx-auto px-4 md:px-6">
             <div className="max-w-3xl mx-auto text-center space-y-8">
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-light tracking-wider text-gray-900 dark:text-gray-100">
+              <h1 className="text-4xl md:text-5xl lg:text-6xl font-light tracking-wider text-white">
                 Welcome to Agos Capital
               </h1>
-              <p className="text-xl text-gray-600 dark:text-gray-300">
+              <p className="text-xl text-gray-200">
                 Your trusted partner in innovative financial solutions and strategic investments.
               </p>
               <div className="flex justify-center gap-4">
@@ -106,7 +168,7 @@ export default function Home() {
                 <Button
                   onClick={handleContactClick}
                   variant="outline"
-                  className="text-blue-600 border-blue-600 hover:bg-blue-50 dark:text-blue-400 dark:border-blue-400 dark:hover:bg-gray-800 px-8"
+                  className="text-white border-white hover:bg-white/10 px-8"
                 >
                   Contact Us
                 </Button>
