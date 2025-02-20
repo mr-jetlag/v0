@@ -31,7 +31,7 @@ export default function Home() {
         </nav>
       </header>
       <main className="flex-1">
-        <section className="w-full py-12 md:py-24 lg:py-32 xl:py-48 bg-gradient-to-b from-black to-gray-900">
+        <section className="w-screen py-12 md:py-24 lg:py-32 xl:py-48 bg-gradient-to-b from-black to-gray-900">
           <div className="container px-4 md:px-6">
             <div className="flex flex-col items-center space-y-4 text-center">
               <div className="space-y-2">
@@ -45,7 +45,7 @@ export default function Home() {
             </div>
           </div>
         </section>
-        <section id="about" className="w-full py-12 md:py-24 lg:py-32 bg-gray-900">
+        <section id="about" className="w-screen py-12 md:py-24 lg:py-32 bg-gray-900">
           <div className="container px-4 md:px-6">
             <h2 className="text-3xl font-light tracking-wider sm:text-4xl md:text-5xl text-center mb-8">
               About Us
@@ -88,7 +88,7 @@ export default function Home() {
             </div>
           </div>
         </section>
-        <section id="clients" className="w-full py-12 md:py-24 lg:py-32 bg-black">
+        <section id="clients" className="w-screen py-12 md:py-24 lg:py-32 bg-black">
           <div className="container px-4 md:px-6">
             <h2 className="text-3xl font-light tracking-wider sm:text-4xl md:text-5xl text-center mb-8">Our Clients</h2>
             <p className="text-gray-300 text-center mb-8">
@@ -142,7 +142,7 @@ export default function Home() {
             </div>
           </div>
         </section>
-        <section id="investors" className="w-full py-12 md:py-24 lg:py-32 bg-gray-900">
+        <section id="investors" className="w-screen py-12 md:py-24 lg:py-32 bg-gradient-to-b from-gray-900 to-black">
           <div className="container px-4 md:px-6">
             <h2 className="text-3xl font-light tracking-wider sm:text-4xl md:text-5xl text-center mb-8">
               Our Investment Approach
@@ -202,7 +202,7 @@ export default function Home() {
           </div>
         </section>
       </main>
-      <footer className="flex flex-col gap-2 sm:flex-row py-6 w-full shrink-0 items-center px-4 md:px-6 border-t border-gray-800">
+      <footer className="flex flex-col gap-2 sm:flex-row py-6 w-screen shrink-0 items-center px-4 md:px-6 border-t border-gray-800">
         <p className="text-xs text-gray-400">© 2024 Agos Capital. All rights reserved.</p>
         <nav className="sm:ml-auto flex gap-4 sm:gap-6">
         </nav>
