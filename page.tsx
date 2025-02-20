@@ -20,7 +20,7 @@ declare global {
 }
 
 export default function Home() {
-  const [darkMode, setDarkMode] = useState(false)
+  const [darkMode, setDarkMode] = useState(true)
   const [showContactForm, setShowContactForm] = useState(false)
   const [formData, setFormData] = useState({ name: "", phone: "", email: "" })
 
@@ -167,7 +167,7 @@ export default function Home() {
                 <Button
                   onClick={handleContactClick}
                   variant="outline"
-                  className="text-white border-white hover:bg-white/10 px-8"
+                  className="text-gray border-white hover:bg-white/10 px-8"
                 >
                   Contact Us
                 </Button>
@@ -264,7 +264,7 @@ export default function Home() {
                 <Button
                   onClick={handleContactClick}
                   variant="outline"
-                  className="text-white border-white hover:bg-white/10 px-8"
+                  className="text-gray border-white hover:bg-white/10 px-8"
                 >
                   Client Advisory
                   <ArrowRight className="ml-2 h-4 w-4" />
@@ -330,7 +330,7 @@ export default function Home() {
                 <Button
                   onClick={handleContactClick}
                   variant="outline"
-                  className="text-white border-white hover:bg-white/10 px-8"
+                  className="text-gray border-white hover:bg-white/10 px-8"
                 >
                   Co-Investment
                   <ArrowRight className="ml-2 h-4 w-4" />
