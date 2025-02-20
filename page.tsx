@@ -1,14 +1,20 @@
 "use client"
 
+import type React from "react"
+
 import { useState, useEffect } from "react"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
-import { ArrowRight, Moon, Sun } from "lucide-react"
+import { Input } from "@/components/ui/input"
+import { Label } from "@/components/ui/label"
+import { ArrowRight, Moon, Sun, X } from "lucide-react"
 import Image from "next/image"
 import Link from "next/link"
 
 export default function Home() {
   const [darkMode, setDarkMode] = useState(false)
+  const [showContactForm, setShowContactForm] = useState(false)
+  const [formData, setFormData] = useState({ name: "", phone: "", email: "" })
 
   useEffect(() => {
     if (darkMode) {
@@ -22,16 +28,42 @@ export default function Home() {
     setDarkMode(!darkMode)
   }
 
+  const handleContactClick = () => {
+    setShowContactForm(true)
+  }
+
+  const handleCloseForm = () => {
+    setShowContactForm(false)
+  }
+
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    setFormData({ ...formData, [e.target.name]: e.target.value })
+  }
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault()
+    // Here you would typically send the form data to your server or API
+    console.log("Form submitted:", formData)
+    // For demonstration, we'll just log the data and close the form
+    alert("Thank you for your enquiry. We will get back to you soon.")
+    setShowContactForm(false)
+    setFormData({ name: "", phone: "", email: "" }) // Reset form
+  }
+
   return (
     <div className="flex flex-col min-h-screen bg-white dark:bg-gray-900 transition-colors duration-300">
       <header className="container mx-auto px-4 lg:px-6 h-24 flex items-center justify-between border-b dark:border-gray-700">
         <Link className="flex items-center justify-center" href="#">
           <Image
-            src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Agos%20Dark%20Logo-Sisj0KrYxd2TsEI1TanU6PHNQp6VhT.png"
+            src={
+              darkMode
+                ? "/Agos%20Dark%20Logo-Sisj0KrYxd2TsEI1TanU6PHNQp6VhT.png"
+                : "/Agos%20Light%20Logo-pArHvH4wCElHOcPwLw4tLiqXlxtpUj.png"
+            }
             alt="Agos Capital Logo"
             width={50}
             height={50}
-            className={darkMode ? "brightness-200" : "brightness-0"}
+            className="transition-all duration-300"
           />
           <span className="ml-4 text-xl font-light tracking-wider text-gray-900 dark:text-gray-100">AGOS CAPITAL</span>
         </Link>
@@ -72,6 +104,7 @@ export default function Home() {
               <div className="flex justify-center gap-4">
                 <Button className="bg-blue-600 hover:bg-blue-700 text-white px-8">Learn More</Button>
                 <Button
+                  onClick={handleContactClick}
                   variant="outline"
                   className="text-blue-600 border-blue-600 hover:bg-blue-50 dark:text-blue-400 dark:border-blue-400 dark:hover:bg-gray-800 px-8"
                 >
@@ -265,6 +298,51 @@ export default function Home() {
           </nav>
         </div>
       </footer>
+
+      {/* Contact Form Modal */}
+      {showContactForm && (
+        <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center p-4">
+          <div className="bg-white dark:bg-gray-800 rounded-lg p-6 w-full max-w-md">
+            <div className="flex justify-between items-center mb-4">
+              <h2 className="text-2xl font-bold text-gray-900 dark:text-gray-100">Contact Us</h2>
+              <Button variant="ghost" size="icon" onClick={handleCloseForm}>
+                <X className="h-6 w-6" />
+              </Button>
+            </div>
+            <form onSubmit={handleSubmit} className="space-y-4">
+              <div>
+                <Label htmlFor="name">Name</Label>
+                <Input id="name" name="name" value={formData.name} onChange={handleInputChange} required />
+              </div>
+              <div>
+                <Label htmlFor="phone">Phone Number</Label>
+                <Input
+                  id="phone"
+                  name="phone"
+                  type="tel"
+                  value={formData.phone}
+                  onChange={handleInputChange}
+                  required
+                />
+              </div>
+              <div>
+                <Label htmlFor="email">Email Address</Label>
+                <Input
+                  id="email"
+                  name="email"
+                  type="email"
+                  value={formData.email}
+                  onChange={handleInputChange}
+                  required
+                />
+              </div>
+              <Button type="submit" className="w-full bg-blue-600 hover:bg-blue-700 text-white">
+                Submit
+              </Button>
+            </form>
+          </div>
+        </div>
+      )}
     </div>
   )
 }
