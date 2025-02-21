@@ -359,7 +359,7 @@ export default function Home() {
               </Button>
             </div>
             <form onSubmit={handleSubmit} 
-              className="gform method="POST" 
+              className="gform" method="POST" 
               data-email="example@mail.net" 
               action="https://script.google.com/macros/s/AKfycbxPivtdHdOi2MD9OcA3PWfJjXlMbxgErSy49Jtyy9vBqFTBlYkRSzmAB6_BzwOfGnbx1g/exec"
               space-y-4">
