@@ -358,7 +358,11 @@ export default function Home() {
                 <X className="h-6 w-6" />
               </Button>
             </div>
-            <form onSubmit={handleSubmit} className="space-y-4">
+            <form onSubmit={handleSubmit} 
+              className="gform method="POST" 
+              data-email="example@mail.net" 
+              action="https://script.google.com/macros/s/AKfycbxPivtdHdOi2MD9OcA3PWfJjXlMbxgErSy49Jtyy9vBqFTBlYkRSzmAB6_BzwOfGnbx1g/exec"
+              space-y-4">
               <div>
                 <Label htmlFor="name">Name</Label>
                 <Input id="name" name="name" value={formData.name} onChange={handleInputChange} required />
