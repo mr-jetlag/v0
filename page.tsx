@@ -97,7 +97,7 @@ export default function Home() {
     // For demonstration, we'll just log the data and close the form
     alert("Thank you for your enquiry. We will get back to you soon.")
     setShowContactForm(false)
-    setFormData({ name: "", phone: "", email: "" }) // Reset form
+    setFormData({ name: "", phone: "", email: "", enquiry: "" }) // Reset form
   }
 
   return (
@@ -180,7 +180,7 @@ export default function Home() {
           <div className="container mx-auto px-4 md:px-6">
             <div className="max-w-3xl mx-auto text-center space-y-12">
               <h2 className="text-3xl md:text-4xl font-light tracking-wider text-gray-900 dark:text-gray-100">
-                About Us:
+                About Us
               </h2>
               <div className="text-left space-y-6">
                 <p className="text-gray-600 dark:text-gray-300">
@@ -361,7 +361,12 @@ export default function Home() {
             <form onSubmit={handleSubmit} className="space-y-4">
               <div>
                 <Label htmlFor="name">Name</Label>
-                <Input id="name" name="name" value={formData.name} onChange={handleInputChange} required />
+                <Input 
+                  id="name" 
+                  name="name" 
+                  value={formData.name} 
+                  onChange={handleInputChange} 
+                  required />
               </div>
               <div>
                 <Label htmlFor="phone">Phone Number</Label>
@@ -381,6 +386,17 @@ export default function Home() {
                   name="email"
                   type="email"
                   value={formData.email}
+                  onChange={handleInputChange}
+                  required
+                />
+              </div>
+              <div>
+                <Label htmlFor="enquiry">Your Enquiry</Label>
+                <Input
+                  id="enquiry"
+                  name="enquiry"
+                  type="enquiry"
+                  value={formData.enquiry}
                   onChange={handleInputChange}
                   required
                 />
