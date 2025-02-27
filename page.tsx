@@ -164,13 +164,14 @@ export default function Home() {
                 We believe capital should flow to where it's needed most.
               </p>
               <div className="flex justify-center gap-4">
-                <Button
+             {/*     <Button
                   onClick={handleContactClick}
                   variant="outline"
                   className="text-gray border-white hover:bg-white/10 px-8"
                 >
                   Contact Us
                 </Button>
+              */}
               </div>
             </div>
           </div>
