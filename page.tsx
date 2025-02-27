@@ -90,12 +90,12 @@ export default function Home() {
     setFormData({ ...formData, [e.target.name]: e.target.value })
   }
 
-  const handleSubmit = async (e: React.FormEvent) => {
+  const handlePost = async (e: React.FormEvent) => {
     e.preventDefault()
     // Here you would typically send the form data to your server or API
     console.log("Form submitted:", formData)
     // For demonstration, we'll just log the data and close the form
-    alert("Thank you for your enquiry. We will get back to you soon.")
+    alert("Thank you for your enquiry. We will get back to you soon. Data:", formData)
     setShowContactForm(false)
     setFormData({ name: "", phone: "", email: "", enquiry: "" }) // Reset form
   }
@@ -262,14 +262,19 @@ export default function Home() {
                   Working with clients who share our goals and values, we are able to provide immediate value and
                   meaningful long term impact – up to and including private market exits.
                 </p>
-                <Button
-                  onClick={handleContactClick}
+                <p></p>
+                 <Link
+                  className="text-sm font-medium text-gray-600 hover:text-blue-600 dark:text-gray-300 dark:hover:text-blue-400 transition-colors"
+                  href="https://calendly.com/contact-agoscapital/30min?back=1"
+                >
+                  <Button
+                  // onClick={handleContactClick}
                   variant="outline"
                   className="text-gray border-white hover:bg-white/10 px-8"
-                >
-                  Client Advisory
-                  <ArrowRight className="ml-2 h-4 w-4" />
-                </Button>
+                  >
+                    Client Advisory <ArrowRight className="ml-2 h-4 w-4"/>
+                  </Button>
+                 </Link>
               </div>
             </div>
           </div>
@@ -328,14 +333,20 @@ export default function Home() {
                   only operate or advise companies where direct involvement accelerates outcomes and provides direct
                   value to our partners.
                 </p>
-                <Button
-                  onClick={handleContactClick}
-                  variant="outline"
-                  className="text-gray border-white hover:bg-white/10 px-8"
+                <p></p>
+                <Link
+                  className="text-sm font-medium text-gray-600 hover:text-blue-600 dark:text-gray-300 dark:hover:text-blue-400 transition-colors"
+                  href="https://calendly.com/contact-agoscapital/30min?back=1"
                 >
-                  Co-Investment
-                  <ArrowRight className="ml-2 h-4 w-4" />
-                </Button>
+                  <Button
+                    // onClick={handleContactClick}
+                    variant="outline"
+                    className="text-gray border-white hover:bg-white/10 px-8"
+                  >
+                    Co-Investment
+                    <ArrowRight className="ml-2 h-4 w-4" />
+                  </Button>
+                </Link>  
               </div>
             </div>
           </div>
@@ -360,7 +371,7 @@ export default function Home() {
               </Button>
             </div>
               <form 
-                onSubmit={handleSubmit} className="space-y-4">
+                onSubmit={handlePost} className="space-y-4">
               <div>
                 <Label htmlFor="name">Name</Label>
                 <Input 
