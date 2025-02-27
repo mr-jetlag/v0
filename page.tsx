@@ -293,13 +293,18 @@ export default function Home() {
                   Working with clients who share our goals and values, we are able to provide immediate value and
                   meaningful long term impact – up to and including private market exits.
                 </p>
-                <Button
-                // onClick={handleContactClick}
-                variant="outline"
-                className="text-gray border-white hover:bg-white/10 px-8"
+                 <Link
+                  className="text-sm font-medium text-gray-600 hover:text-blue-600 dark:text-gray-300 dark:hover:text-blue-400 transition-colors"
+                  href="https://calendly.com/omar-agoscapital/30min?back=1"
                 >
-                  Client Advisory <ArrowRight className="ml-2 h-4 w-4" href="https://calendly.com/omar-agoscapital/30min?back=1"/>
-                </Button>
+                  <Button
+                  // onClick={handleContactClick}
+                  variant="outline"
+                  className="text-gray border-white hover:bg-white/10 px-8"
+                  >
+                    Client Advisory <ArrowRight className="ml-2 h-4 w-4"/>
+                  </Button>
+                 </Link>
               </div>
             </div>
           </div>
@@ -358,15 +363,20 @@ export default function Home() {
                   only operate or advise companies where direct involvement accelerates outcomes and provides direct
                   value to our partners.
                 </p>
-                <Button
-                  // onClick={handleContactClick}
-                  variant="outline"
-                  className="text-gray border-white hover:bg-white/10 px-8"
+                <Link
+                  className="text-sm font-medium text-gray-600 hover:text-blue-600 dark:text-gray-300 dark:hover:text-blue-400 transition-colors"
                   href="https://calendly.com/omar-agoscapital/30min?back=1"
                 >
-                  Co-Investment
-                  <ArrowRight className="ml-2 h-4 w-4" href="https://calendly.com/omar-agoscapital/30min?back=1" />
-                </Button>
+                  <Button
+                    // onClick={handleContactClick}
+                    variant="outline"
+                    className="text-gray border-white hover:bg-white/10 px-8"
+                    href="https://calendly.com/omar-agoscapital/30min?back=1"
+                  >
+                    Co-Investment
+                    <ArrowRight className="ml-2 h-4 w-4" />
+                  </Button>
+                </Link>  
               </div>
             </div>
           </div>
