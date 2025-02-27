@@ -265,7 +265,7 @@ export default function Home() {
                 <p></p>
                  <Link
                   className="text-sm font-medium text-gray-600 hover:text-blue-600 dark:text-gray-300 dark:hover:text-blue-400 transition-colors"
-                  href="https://calendly.com/omar-agoscapital/30min?back=1"
+                  href="https://calendly.com/contact-agoscapital/30min?back=1"
                 >
                   <Button
                   // onClick={handleContactClick}
@@ -336,7 +336,7 @@ export default function Home() {
                 <p></p>
                 <Link
                   className="text-sm font-medium text-gray-600 hover:text-blue-600 dark:text-gray-300 dark:hover:text-blue-400 transition-colors"
-                  href="https://calendly.com/omar-agoscapital/30min?back=1"
+                  href="https://calendly.com/contact-agoscapital/30min?back=1"
                 >
                   <Button
                     // onClick={handleContactClick}
