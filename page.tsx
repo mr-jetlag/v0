@@ -93,6 +93,37 @@ export default function Home() {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
     // Here you would typically send the form data to your server or API
+    const target = event.target as typeof event.target & {
+      email: {value: string},
+    }
+    const date = new Date()
+    const inputValue: {[key:string]:string} = {
+      'Email': target.email.value,
+      'Created At': date.toLocaleString(),
+    }
+    console.log(inputValue)
+    const APP_ID = 'APP_ID'
+    const baseURL = `https://script.google.com/macros/s/AKfycbyHzBowik-32PuqME5FXA09URrUHEUOvBzF50KQcL7qV3JuQqTFo2UoYXCYfVuG-KlAvQ/exec`
+    const formData = new FormData()
+    Object.keys(inputValue).forEach((key) => {
+      formData.append(key, inputValue[key])
+    })
+    try {
+       const res = await fetch(baseURL, {
+        method: 'POST',
+        body: formData,
+       })
+      if(res.ok){
+        console.log('Request was successful:', res);
+      }else{
+        console.log('Request Failed:', res);        
+      }
+    }catch(e){
+      console.error('Error during fetch:', e);
+    }
+
+
+    
     console.log("Form submitted:", formData)
     // For demonstration, we'll just log the data and close the form
     alert("Thank you for your enquiry. We will get back to you soon.")
