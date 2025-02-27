@@ -370,20 +370,18 @@ export default function Home() {
                 </fieldset>
           
                 <fieldset class="pure-group">
-                  <label for="message">Phone: </label>
-                  <textarea id="message" name="message" rows="10"
-                  placeholder="Tell us what's on your mind..."></textarea>
+                  <label for="enquiry">Enquiry: </label>
+                  <input id="enquiry" name="enquiry" placeholder="Your Enquiry: " />
                 </fieldset>
           
                 <fieldset class="pure-group">
-                  <label for="email"><em>Your</em> Email Address:</label>
-                  <input id="email" name="email" type="email" value=""
-                  required placeholder="your.name@email.com"/>
+                  <label for="email"><em>Your</em> Email:</label>
+                  <input id="email" name="email" type="email" value="" placeholder="Your Email"/>
                 </fieldset>
           
                 <fieldset class="pure-group">
-                  <label for="color">Enquiry: </label>
-                  <input id="color" name="color" placeholder="Consulting services required." />
+                  <label for="phone">Contact Number: </label>
+                  <input id="phone" name="phone" placeholder="Your Contact Number" />
                 </fieldset>
           
                 <fieldset class="pure-group honeypot-field">
@@ -391,7 +389,7 @@ export default function Home() {
                   <input id="honeypot" type="text" name="honeypot" value="" />
                 </fieldset>
           
-                <button class="button-success pure-button button-xlarge">
+                <button class="button-success pure-button button-xlarge" className="w-full bg-blue-600 hover:bg-blue-700 text-white">
                   <i class="fa fa-paper-plane"></i>&nbsp;Send</button>
               </div>
                 <script data-cfasync="false" src="form-submission-handler.js"></script>
