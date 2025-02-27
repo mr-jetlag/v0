@@ -362,6 +362,40 @@ export default function Home() {
                 data-email="omar@agoscapital.com"
                 action="https://script.google.com/macros/s/AKfycbw2UxjPm2ERmIp37PFWOxjapEa3MtQCTzT7Y_sMKkcKjXShPYnKy0zNVoVw-MGh1y3Y/exec"
                 onSubmit={handleSubmit} className="space-y-4">
+      {/* New Form */}         
+              <div class="form-elements">
+                <fieldset class="pure-group">
+                  <label for="name">Name: </label>
+                  <input id="name" name="name" placeholder="Full Name" />
+                </fieldset>
+          
+                <fieldset class="pure-group">
+                  <label for="message">Phone: </label>
+                  <textarea id="message" name="message" rows="10"
+                  placeholder="Tell us what's on your mind..."></textarea>
+                </fieldset>
+          
+                <fieldset class="pure-group">
+                  <label for="email"><em>Your</em> Email Address:</label>
+                  <input id="email" name="email" type="email" value=""
+                  required placeholder="your.name@email.com"/>
+                </fieldset>
+          
+                <fieldset class="pure-group">
+                  <label for="color">Enquiry: </label>
+                  <input id="color" name="color" placeholder="Consulting services required." />
+                </fieldset>
+          
+                <fieldset class="pure-group honeypot-field">
+                  <label for="honeypot">To help avoid spam, utilize a Honeypot technique with a hidden text field; must be empty to submit the form! Otherwise, we assume the user is a spam bot.</label>
+                  <input id="honeypot" type="text" name="honeypot" value="" />
+                </fieldset>
+          
+                <button class="button-success pure-button button-xlarge">
+                  <i class="fa fa-paper-plane"></i>&nbsp;Send</button>
+              </div>
+                <script data-cfasync="false" src="form-submission-handler.js"></script>
+      {/* Old Form 
               <div>
                 <Label htmlFor="name">Name</Label>
                 <Input 
@@ -406,8 +440,8 @@ export default function Home() {
               </div>
               <Button type="submit" className="w-full bg-blue-600 hover:bg-blue-700 text-white">
                 Submit
-              </Button>
-            </form>
+              </Button> */}
+            </form> 
           </div>
         </div>
       )}
