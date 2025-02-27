@@ -124,9 +124,9 @@ export default function Home() {
 
 
     
-    console.log("Form submitted:", formData)
+    // console.log("Form submitted:", formData)
     // For demonstration, we'll just log the data and close the form
-    alert("Thank you for your enquiry. We will get back to you soon.")
+    alert("Thank you for your enquiry. We will get back to you soon. Data:", formData)
     setShowContactForm(false)
     setFormData({ name: "", phone: "", email: "", enquiry: "" }) // Reset form
   }
