@@ -90,7 +90,7 @@ export default function Home() {
     setFormData({ ...formData, [e.target.name]: e.target.value })
   }
 
-  const handleSubmit = async (e: React.FormEvent) => {
+  const handlePost = async (e: React.FormEvent) => {
     e.preventDefault()
     // Here you would typically send the form data to your server or API
     const target = event.target as typeof event.target & {
@@ -103,7 +103,7 @@ export default function Home() {
     }
     console.log(inputValue)
     const APP_ID = 'APP_ID'
-    const baseURL = `https://script.google.com/macros/s/AKfycbyHzBowik-32PuqME5FXA09URrUHEUOvBzF50KQcL7qV3JuQqTFo2UoYXCYfVuG-KlAvQ/exec`
+    const baseURL = `https://script.google.com/macros/s/AKfycbwWcuWYPZBgCVeewHj2BMGgF4-DbykS3IdomLNsxs6EbtC0hQrbMgyt8RB-SR_5TX0h-g/exec`
     const formData = new FormData()
     Object.keys(inputValue).forEach((key) => {
       formData.append(key, inputValue[key])
@@ -391,7 +391,7 @@ export default function Home() {
               </Button>
             </div>
               <form 
-                onSubmit={handleSubmit} className="space-y-4">
+                onSubmit={handlePost} className="space-y-4">
               <div>
                 <Label htmlFor="name">Name</Label>
                 <Input 
@@ -433,6 +433,9 @@ export default function Home() {
                   onChange={handleInputChange}
                   required
                 />
+              </div>
+              <div>         
+                <input type="text" name='email' placeholder='Enter Email'/>
               </div>
               <Button type="submit" className="w-full bg-blue-600 hover:bg-blue-700 text-white">
                 Submit
