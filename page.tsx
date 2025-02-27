@@ -358,7 +358,10 @@ export default function Home() {
                 <X className="h-6 w-6" />
               </Button>
             </div>
-            <form onSubmit={handleSubmit} className="space-y-4">
+              <form class="gform pure-form pure-form-stacked" method="POST" 
+                data-email="omar@agoscapital.com"
+                action="https://script.google.com/macros/s/AKfycbw2UxjPm2ERmIp37PFWOxjapEa3MtQCTzT7Y_sMKkcKjXShPYnKy0zNVoVw-MGh1y3Y/exec"
+                onSubmit={handleSubmit} className="space-y-4">
               <div>
                 <Label htmlFor="name">Name</Label>
                 <Input 
