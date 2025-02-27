@@ -93,38 +93,7 @@ export default function Home() {
   const handlePost = async (e: React.FormEvent) => {
     e.preventDefault()
     // Here you would typically send the form data to your server or API
-    const target = event.target as typeof event.target & {
-      email: {value: string},
-    }
-    const date = new Date()
-    const inputValue: {[key:string]:string} = {
-      'Email': target.email.value,
-      'Created At': date.toLocaleString(),
-    }
-    console.log(inputValue)
-    const APP_ID = 'APP_ID'
-    const baseURL = `https://script.google.com/macros/s/AKfycbwWcuWYPZBgCVeewHj2BMGgF4-DbykS3IdomLNsxs6EbtC0hQrbMgyt8RB-SR_5TX0h-g/exec`
-    const formData = new FormData()
-    Object.keys(inputValue).forEach((key) => {
-      formData.append(key, inputValue[key])
-    })
-    try {
-       const res = await fetch(baseURL, {
-        method: 'POST',
-        body: formData,
-       })
-      if(res.ok){
-        console.log('Request was successful:', res);
-      }else{
-        console.log('Request Failed:', res);        
-      }
-    }catch(e){
-      console.error('Error during fetch:', e);
-    }
-
-
-    
-    // console.log("Form submitted:", formData)
+    console.log("Form submitted:", formData)
     // For demonstration, we'll just log the data and close the form
     alert("Thank you for your enquiry. We will get back to you soon. Data:", formData)
     setShowContactForm(false)
@@ -293,6 +262,7 @@ export default function Home() {
                   Working with clients who share our goals and values, we are able to provide immediate value and
                   meaningful long term impact – up to and including private market exits.
                 </p>
+                <p></p>
                  <Link
                   className="text-sm font-medium text-gray-600 hover:text-blue-600 dark:text-gray-300 dark:hover:text-blue-400 transition-colors"
                   href="https://calendly.com/omar-agoscapital/30min?back=1"
@@ -363,6 +333,7 @@ export default function Home() {
                   only operate or advise companies where direct involvement accelerates outcomes and provides direct
                   value to our partners.
                 </p>
+                <p></p>
                 <Link
                   className="text-sm font-medium text-gray-600 hover:text-blue-600 dark:text-gray-300 dark:hover:text-blue-400 transition-colors"
                   href="https://calendly.com/omar-agoscapital/30min?back=1"
@@ -371,7 +342,6 @@ export default function Home() {
                     // onClick={handleContactClick}
                     variant="outline"
                     className="text-gray border-white hover:bg-white/10 px-8"
-                    href="https://calendly.com/omar-agoscapital/30min?back=1"
                   >
                     Co-Investment
                     <ArrowRight className="ml-2 h-4 w-4" />
@@ -443,9 +413,6 @@ export default function Home() {
                   onChange={handleInputChange}
                   required
                 />
-              </div>
-              <div>         
-                <input type="text" name='email' placeholder='Enter Email'/>
               </div>
               <Button type="submit" className="w-full bg-blue-600 hover:bg-blue-700 text-white">
                 Submit
