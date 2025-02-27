@@ -358,42 +358,8 @@ export default function Home() {
                 <X className="h-6 w-6" />
               </Button>
             </div>
-              <form class="gform pure-form pure-form-stacked" method="POST" 
-                data-email="omar@agoscapital.com"
-                action="https://script.google.com/macros/s/AKfycbw2UxjPm2ERmIp37PFWOxjapEa3MtQCTzT7Y_sMKkcKjXShPYnKy0zNVoVw-MGh1y3Y/exec"
+              <form 
                 onSubmit={handleSubmit} className="space-y-4">
-      {/* New Form */}         
-              <div class="form-elements">
-                <fieldset class="pure-group">
-                  <label for="name">Name: </label>
-                  <input id="name" name="name" placeholder="Full Name" />
-                </fieldset>
-          
-                <fieldset class="pure-group">
-                  <label for="enquiry">Enquiry: </label>
-                  <input id="enquiry" name="enquiry" placeholder="Your Enquiry: " />
-                </fieldset>
-          
-                <fieldset class="pure-group">
-                  <label for="email"><em>Your</em> Email:</label>
-                  <input id="email" name="email" type="email" value="" placeholder="Your Email"/>
-                </fieldset>
-          
-                <fieldset class="pure-group">
-                  <label for="phone">Contact Number: </label>
-                  <input id="phone" name="phone" placeholder="Your Contact Number" />
-                </fieldset>
-          
-                <fieldset class="pure-group honeypot-field">
-                  <label for="honeypot">To help avoid spam, utilize a Honeypot technique with a hidden text field; must be empty to submit the form! Otherwise, we assume the user is a spam bot.</label>
-                  <input id="honeypot" type="text" name="honeypot" value="" />
-                </fieldset>
-          
-                <button class="button-success pure-button button-xlarge" className="w-full bg-blue-600 hover:bg-blue-700 text-white">
-                  <i class="fa fa-paper-plane"></i>&nbsp;Send</button>
-              </div>
-                <script data-cfasync="false" src="form-submission-handler.js"></script>
-      {/* Old Form 
               <div>
                 <Label htmlFor="name">Name</Label>
                 <Input 
@@ -438,7 +404,7 @@ export default function Home() {
               </div>
               <Button type="submit" className="w-full bg-blue-600 hover:bg-blue-700 text-white">
                 Submit
-              </Button> */}
+              </Button>
             </form> 
           </div>
         </div>
