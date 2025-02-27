@@ -294,9 +294,10 @@ export default function Home() {
                   meaningful long term impact – up to and including private market exits.
                 </p>
                 <Button
-                  onClick={handleContactClick}
+                  // onClick={handleContactClick}
                   variant="outline"
                   className="text-gray border-white hover:bg-white/10 px-8"
+                  href="https://calendly.com/omar-agoscapital/30min?back=1"
                 >
                   Client Advisory
                   <ArrowRight className="ml-2 h-4 w-4" />
@@ -360,9 +361,10 @@ export default function Home() {
                   value to our partners.
                 </p>
                 <Button
-                  onClick={handleContactClick}
+                  // onClick={handleContactClick}
                   variant="outline"
                   className="text-gray border-white hover:bg-white/10 px-8"
+                  href="https://calendly.com/omar-agoscapital/30min?back=1"
                 >
                   Co-Investment
                   <ArrowRight className="ml-2 h-4 w-4" />
