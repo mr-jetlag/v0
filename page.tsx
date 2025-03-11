@@ -234,7 +234,7 @@ export default function Home() {
                 </Card>
                 <Card className="dark:bg-gray-800 dark:border-gray-700">
                   <CardHeader>
-                    <CardTitle className="text-gray-900 dark:text-gray-100">Startup Firms to PE Portfolio Companies</CardTitle>
+                    <CardTitle className="text-gray-900 dark:text-gray-100">Portfolio Companies & Startups</CardTitle>
                   </CardHeader>
                   <CardContent className="text-gray-600 dark:text-gray-300">
                     <p>Product/market fit, Direct Operation / Fractional CxO Services, Board Advisor</p>
