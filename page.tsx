@@ -226,18 +226,18 @@ export default function Home() {
               <div className="grid gap-8 sm:grid-cols-2">
                 <Card className="dark:bg-gray-800 dark:border-gray-700">
                   <CardHeader>
-                    <CardTitle className="text-gray-900 dark:text-gray-100">Investment Portfolio Companies</CardTitle>
+                    <CardTitle className="text-gray-900 dark:text-gray-100">Private Capital Markets</CardTitle>
                   </CardHeader>
                   <CardContent className="text-gray-600 dark:text-gray-300">
-                    <p>CxO or Board Observer</p>
+                    <p>Transactional advisory and operational consulting </p>
                   </CardContent>
                 </Card>
                 <Card className="dark:bg-gray-800 dark:border-gray-700">
                   <CardHeader>
-                    <CardTitle className="text-gray-900 dark:text-gray-100">Startup Fintech Firms</CardTitle>
+                    <CardTitle className="text-gray-900 dark:text-gray-100">Startup Firms to PE Portfolio Companies</CardTitle>
                   </CardHeader>
                   <CardContent className="text-gray-600 dark:text-gray-300">
-                    <p>Product/market fit, Direct Operation / Fractional CxO Services</p>
+                    <p>Product/market fit, Direct Operation / Fractional CxO Services, Board Advisor</p>
                   </CardContent>
                 </Card>
                 <Card className="dark:bg-gray-800 dark:border-gray-700">
