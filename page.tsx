@@ -47,11 +47,11 @@ export default function Home() {
 
     window.onYouTubeIframeAPIReady = () => {
       player = new window.YT.Player("youtube-player", {
-        videoId: "oYEtLQ3lEH0",
+        videoId: "yXQOV41AIpc",
         playerVars: {
           autoplay: 1,
           loop: 1,
-          playlist: "oYEtLQ3lEH0",
+          playlist: "yXQOV41AIpc",
           controls: 0,
           showinfo: 0,
           rel: 0,
