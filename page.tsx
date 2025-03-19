@@ -51,12 +51,12 @@ export default function Home() {
         playerVars: {
           autoplay: 1,
           loop: 1,
-          playlist: "yXQOV41AIpc",
+          playlist: "yXQOV41AIpc","qHXFLsnKDq0",
           controls: 0,
           showinfo: 0,
           rel: 0,
           enablejsapi: 1,
-          modestbranding: 1,
+          modestbranding: 0,
           mute: 1,
         },
         events: {
