@@ -67,6 +67,7 @@ export default function Home() {
           onReady: (event: any) => {
             event.target.playVideo()
           },
+        pointer-events: none,
         },
       })
     }
