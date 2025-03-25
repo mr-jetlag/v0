@@ -20,7 +20,7 @@ declare global {
 }
 
 export default function Home() {
-  const [darkMode, setDarkMode] = useState(true)
+  const [darkMode, setDarkMode] = useState(false)
   const [showContactForm, setShowContactForm] = useState(false)
   const [formData, setFormData] = useState({ name: "", phone: "", email: "" })
 
@@ -52,9 +52,11 @@ export default function Home() {
           autoplay: 1,
           loop: 1,
           playlist: "tu8DoBIOLv8",
+          plasyinline: 1,
           controls: 0,
           color: "white",
           showinfo: 0,
+          start: 10,
           rel: 0,
           enablejsapi: 1,
           modestbranding: 1,
@@ -149,7 +151,7 @@ export default function Home() {
             <div className="relative w-full h-full">
               <div
                 id="youtube-player"
-                className="absolute top-1/2 left-1/2 w-[100vw] h-[56.25vw] min-h-[100vh] min-w-[177.77vh] -translate-x-1/2 -translate-y-1/2 pointer-events-none"
+                className="w-[195.56vw] h-[110vw] min-w-[100vh] min-h-[56.25vh] -translate-y-12 pointer-events-none"
               />
               <div className="absolute inset-0 bg-black/40" /> {/* Overlay */}
             </div>
