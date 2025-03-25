@@ -100,14 +100,14 @@ iframe {
 
 @media (max-aspect-ratio: 16 / 9) {
   #youtube-player {
-    width: 222.22vh;
-    height: 125vh;
+    width: 177.78vh;
+    height: 100vh;
   }
 }
 
 @media (min-aspect-ratio: 16 / 9) {
   #youtube-player {
-    width: 222.22vw;
-    height: 125vw;
+    width: 100vw;
+    height: 56.25vw;
   }
 }
