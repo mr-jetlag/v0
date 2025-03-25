@@ -48,6 +48,7 @@ export default function Home() {
     window.onYouTubeIframeAPIReady = () => {
       player = new window.YT.Player("youtube-player", {
         playlistId: "tu8DoBIOLv8",
+        rel: 0,
         playerVars: {
           autoplay: 1,
           loop: 1,
