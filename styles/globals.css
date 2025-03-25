@@ -107,7 +107,7 @@ iframe {
 
 @media (min-aspect-ratio: 16 / 9) {
   #youtube-player {
-    width: 100vw;
-    height: 56.25vw;
+    width: 222.22vw;
+    height: 125vw;
   }
 }
