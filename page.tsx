@@ -47,7 +47,7 @@ export default function Home() {
 
     window.onYouTubeIframeAPIReady = () => {
       player = new window.YT.Player("youtube-player", {
-        videoId: "oYEtLQ3lEH0",
+        videoId: "tu8DoBIOLv8",
         playerVars: {
           autoplay: 1,
           loop: 1,
@@ -57,7 +57,7 @@ export default function Home() {
           showinfo: 0,
           rel: 0,
           enablejsapi: 1,
-          modestbranding: 0,
+          modestbranding: 1,
           mute: 1,
         },
         events: {
