@@ -67,7 +67,6 @@ export default function Home() {
           onReady: (event: any) => {
             event.target.playVideo()
           },
-        pointer-events: none,
         },
       })
     }
@@ -153,9 +152,9 @@ export default function Home() {
             <div className="relative w-full h-full">
               <div
                 id="youtube-player"
-                className="w-[195.56vw] h-[110vw] min-w-[195.56vh] min-h-[110vh] -translate-y-12 pointer-events-none"
+                className="absolute w-[195.56vw] h-[110vw] min-w-[195.56vh] min-h-[110vh] -translate-y-12 pointer-events-none"
               />
-              <div className="absolute inset-0 bg-black/40" /> {/* Overlay */}
+              <div className="absolute inset-0 bg-black/40 pointer-events-none" /> {/* Overlay */}
             </div>
           </div>
 
