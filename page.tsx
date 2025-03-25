@@ -51,7 +51,7 @@ export default function Home() {
         playerVars: {
           autoplay: 1,
           loop: 1,
-          playlist: "oYEtLQ3lEH0",
+          playlist: "tu8DoBIOLv8",
           controls: 0,
           color: "white",
           showinfo: 0,
