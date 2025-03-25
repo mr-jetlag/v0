@@ -151,7 +151,7 @@ export default function Home() {
             <div className="relative w-full h-full">
               <div
                 id="youtube-player"
-                className="w-[195.56vw] h-[110vw] min-w-[100vh] min-h-[56.25vh] -translate-y-12 pointer-events-none"
+                className="w-[195.56vw] h-[110vw] min-w-[195.56vh] min-h-[110vh] -translate-y-12 pointer-events-none"
               />
               <div className="absolute inset-0 bg-black/40" /> {/* Overlay */}
             </div>
