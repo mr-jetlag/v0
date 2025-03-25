@@ -20,7 +20,7 @@ declare global {
 }
 
 export default function Home() {
-  const [darkMode, setDarkMode] = useState(true)
+  const [darkMode, setDarkMode] = useState(false)
   const [showContactForm, setShowContactForm] = useState(false)
   const [formData, setFormData] = useState({ name: "", phone: "", email: "" })
 
@@ -53,7 +53,7 @@ export default function Home() {
           loop: 1,
           playlist: "tu8DoBIOLv8",
           controls: 0,
-          color: "white",
+          color: "gray",
           showinfo: 0,
           rel: 0,
           enablejsapi: 1,
