@@ -107,17 +107,15 @@ export default function Home() {
     <div className="flex flex-col min-h-screen bg-white dark:bg-gray-900 transition-colors duration-300">
       <header className="container mx-auto px-4 lg:px-6 h-24 flex items-center justify-between border-b dark:border-gray-700">
         <Link className="flex items-center justify-center" href="#">
-          <Image
-            src={
-              darkMode
-                ? "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Agos%20Dark%20Logo-Sisj0KrYxd2TsEI1TanU6PHNQp6VhT.png"
-                : "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Agos%20Light%20Logo-pArHvH4wCElHOcPwLw4tLiqXlxtpUj.png"
-            }
-            alt="Agos Capital Logo"
-            width={50}
-            height={50}
-            className="transition-all duration-300"
-          />
+          <span className="inline-flex dark:bg-[#101827]">
+            <Image
+              src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Agos%20Light%20Logo-pArHvH4wCElHOcPwLw4tLiqXlxtpUj.png"
+              alt="Agos Capital Logo"
+              width={50}
+              height={50}
+              className="transition-all duration-300 dark:invert dark:mix-blend-screen"
+            />
+          </span>
           <span className="ml-4 text-xl font-light tracking-wider text-gray-900 dark:text-gray-100">AGOS CAPITAL</span>
         </Link>
         <nav className="flex gap-8 items-center">
