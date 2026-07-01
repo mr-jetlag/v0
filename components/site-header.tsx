@@ -39,36 +39,44 @@ export function SiteHeader() {
   }
 
   return (
-    <header className="container mx-auto px-4 lg:px-6 h-24 flex items-center justify-between border-b dark:border-gray-700">
-      <Link className="flex items-center justify-center" href="/">
-        <span className="inline-flex dark:bg-[#101827]">
-          <Image
-            src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Agos%20Light%20Logo-pArHvH4wCElHOcPwLw4tLiqXlxtpUj.png"
-            alt="Agos Capital Logo"
-            width={50}
-            height={50}
-            className="transition-all duration-300 dark:invert dark:mix-blend-screen"
-          />
-        </span>
-        <span className="ml-4 text-xl font-light tracking-wider text-gray-900 dark:text-gray-100">AGOS CAPITAL</span>
-      </Link>
-      <nav className="flex gap-8 items-center">
-        <Link
-          className="text-sm font-medium text-gray-600 hover:text-blue-600 dark:text-gray-300 dark:hover:text-blue-400 transition-colors"
-          href="/#about"
-        >
-          About
+    <header className="sticky top-0 z-50 border-b border-border/60 bg-background/80 backdrop-blur-md supports-[backdrop-filter]:bg-background/60">
+      <div className="container mx-auto px-4 lg:px-6 h-20 flex items-center justify-between">
+        <Link className="flex items-center gap-3 group" href="/">
+          <span className="inline-flex dark:bg-[#101827]">
+            <Image
+              src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Agos%20Light%20Logo-pArHvH4wCElHOcPwLw4tLiqXlxtpUj.png"
+              alt="Agos Capital Logo"
+              width={44}
+              height={44}
+              className="transition-all duration-300 dark:invert dark:mix-blend-screen"
+            />
+          </span>
+          <span className="font-serif text-2xl font-medium tracking-[0.2em] text-foreground">AGOS</span>
         </Link>
-        <Link
-          className="text-sm font-medium text-gray-600 hover:text-blue-600 dark:text-gray-300 dark:hover:text-blue-400 transition-colors"
-          href="/services"
-        >
-          Our Services
-        </Link>
-        <Button variant="ghost" size="icon" onClick={toggleDarkMode} aria-label="Toggle dark mode">
-          {darkMode ? <Sun className="h-5 w-5" /> : <Moon className="h-5 w-5" />}
-        </Button>
-      </nav>
+        <nav className="flex gap-8 items-center">
+          <Link
+            className="relative text-sm font-medium text-muted-foreground hover:text-brand transition-colors after:absolute after:-bottom-1.5 after:left-0 after:h-px after:w-0 after:bg-brand after:transition-all hover:after:w-full"
+            href="/#about"
+          >
+            About
+          </Link>
+          <Link
+            className="relative text-sm font-medium text-muted-foreground hover:text-brand transition-colors after:absolute after:-bottom-1.5 after:left-0 after:h-px after:w-0 after:bg-brand after:transition-all hover:after:w-full"
+            href="/services"
+          >
+            Our Services
+          </Link>
+          <Button
+            variant="ghost"
+            size="icon"
+            onClick={toggleDarkMode}
+            aria-label="Toggle dark mode"
+            className="text-muted-foreground hover:text-brand"
+          >
+            {darkMode ? <Sun className="h-5 w-5" /> : <Moon className="h-5 w-5" />}
+          </Button>
+        </nav>
+      </div>
     </header>
   )
 }
