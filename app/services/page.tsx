@@ -69,7 +69,7 @@ export default function ServicesPage() {
                 <div className="space-y-4">
                   <p className="text-xs uppercase tracking-[0.3em] text-brand-muted">Value Creation</p>
                   <h2 className="font-serif text-4xl md:text-5xl font-light tracking-wide text-foreground text-balance">
-                    Who we create value for
+                    Our Clients
                   </h2>
                 </div>
                 <ul className="space-y-5">
