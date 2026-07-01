@@ -61,9 +61,9 @@ export function SiteHeader() {
         </Link>
         <Link
           className="text-sm font-medium text-gray-600 hover:text-blue-600 dark:text-gray-300 dark:hover:text-blue-400 transition-colors"
-          href="/wip"
+          href="/services"
         >
-          WIP
+          Our Services
         </Link>
         <Button variant="ghost" size="icon" onClick={toggleDarkMode} aria-label="Toggle dark mode">
           {darkMode ? <Sun className="h-5 w-5" /> : <Moon className="h-5 w-5" />}

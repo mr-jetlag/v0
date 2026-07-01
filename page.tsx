@@ -155,10 +155,6 @@ export default function Home() {
                     and to the benefit of the whole.
                   </li>
                 </ul>
-                <p className="text-gray-600 dark:text-gray-300">
-                  Agos Capital operates globally, providing private strategic advisory, consulting and arranging capital
-                  flows wherever needed.
-                </p>
               </div>
             </div>
           </div>
