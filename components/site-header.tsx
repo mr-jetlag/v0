@@ -51,7 +51,7 @@ export function SiteHeader() {
               className="transition-all duration-300 dark:invert dark:mix-blend-screen"
             />
           </span>
-          <span className="font-serif text-2xl font-medium tracking-[0.2em] text-foreground">AGOS</span>
+          <span className="font-serif text-2xl font-medium tracking-[0.2em] text-foreground">AGOS CAPITAL</span>
         </Link>
         <nav className="flex gap-8 items-center">
           <Link
