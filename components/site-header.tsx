@@ -8,14 +8,31 @@ import Link from "next/link"
 
 export function SiteHeader() {
   const [darkMode, setDarkMode] = useState(false)
+  const [loaded, setLoaded] = useState(false)
+
+  // Load the saved preference on mount so it persists across pages
+  useEffect(() => {
+    const stored = localStorage.getItem("darkMode")
+    if (stored !== null) {
+      setDarkMode(stored === "true")
+    } else {
+      // Fall back to the current class in case it was set before hydration
+      setDarkMode(document.documentElement.classList.contains("dark"))
+    }
+    setLoaded(true)
+  }, [])
 
   useEffect(() => {
+    // Wait until the stored preference is loaded so we don't clobber it
+    // with the initial `false` value on every page mount.
+    if (!loaded) return
     if (darkMode) {
       document.documentElement.classList.add("dark")
     } else {
       document.documentElement.classList.remove("dark")
     }
-  }, [darkMode])
+    localStorage.setItem("darkMode", String(darkMode))
+  }, [darkMode, loaded])
 
   const toggleDarkMode = () => {
     setDarkMode(!darkMode)
