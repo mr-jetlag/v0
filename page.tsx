@@ -7,9 +7,9 @@ import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
-import { ArrowRight, Moon, Sun, X } from "lucide-react"
-import Image from "next/image"
+import { ArrowRight, X } from "lucide-react"
 import Link from "next/link"
+import { SiteHeader } from "@/components/site-header"
 
 // Declare YT as a global variable
 declare global {
@@ -20,20 +20,11 @@ declare global {
 }
 
 export default function Home() {
-  const [darkMode, setDarkMode] = useState(false)
   const [showContactForm, setShowContactForm] = useState(false)
   const [formData, setFormData] = useState({ name: "", phone: "", email: "" })
 
   // Add ref for the video container
   const videoContainerRef = useRef<HTMLDivElement>(null)
-
-  useEffect(() => {
-    if (darkMode) {
-      document.documentElement.classList.add("dark")
-    } else {
-      document.documentElement.classList.remove("dark")
-    }
-  }, [darkMode])
 
   // Effect to handle video positioning
   useEffect(() => {
@@ -77,10 +68,6 @@ export default function Home() {
     }
   }, [])
 
-  const toggleDarkMode = () => {
-    setDarkMode(!darkMode)
-  }
-
   const handleContactClick = () => {
     setShowContactForm(true)
   }
@@ -105,43 +92,7 @@ export default function Home() {
 
   return (
     <div className="flex flex-col min-h-screen bg-white dark:bg-gray-900 transition-colors duration-300">
-      <header className="container mx-auto px-4 lg:px-6 h-24 flex items-center justify-between border-b dark:border-gray-700">
-        <Link className="flex items-center justify-center" href="#">
-          <span className="inline-flex dark:bg-[#101827]">
-            <Image
-              src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Agos%20Light%20Logo-pArHvH4wCElHOcPwLw4tLiqXlxtpUj.png"
-              alt="Agos Capital Logo"
-              width={50}
-              height={50}
-              className="transition-all duration-300 dark:invert dark:mix-blend-screen"
-            />
-          </span>
-          <span className="ml-4 text-xl font-light tracking-wider text-gray-900 dark:text-gray-100">AGOS CAPITAL</span>
-        </Link>
-        <nav className="flex gap-8 items-center">
-          <Link
-            className="text-sm font-medium text-gray-600 hover:text-blue-600 dark:text-gray-300 dark:hover:text-blue-400 transition-colors"
-            href="#about"
-          >
-            About
-          </Link>
-          <Link
-            className="text-sm font-medium text-gray-600 hover:text-blue-600 dark:text-gray-300 dark:hover:text-blue-400 transition-colors"
-            href="#clients"
-          >
-            Clients
-          </Link>
-          <Link
-            className="text-sm font-medium text-gray-600 hover:text-blue-600 dark:text-gray-300 dark:hover:text-blue-400 transition-colors"
-            href="#investors"
-          >
-            Investors
-          </Link>
-          <Button variant="ghost" size="icon" onClick={toggleDarkMode} aria-label="Toggle dark mode">
-            {darkMode ? <Sun className="h-5 w-5" /> : <Moon className="h-5 w-5" />}
-          </Button>
-        </nav>
-      </header>
+      <SiteHeader />
       <main className="flex-1">
         <section className="relative w-full h-screen min-h-[600px] flex items-center justify-center overflow-hidden">
           {/* Video Background */}
