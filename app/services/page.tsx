@@ -52,6 +52,9 @@ export default function ServicesPage() {
         {/* Value Creation */}
         <section className="w-full py-24">
           <div className="container mx-auto px-4 md:px-6">
+            <h2 className="text-3xl md:text-4xl font-light tracking-wider text-gray-900 dark:text-gray-100 text-center mb-12">
+              Value Creation
+            </h2>
             <div className="max-w-5xl mx-auto grid gap-12 md:grid-cols-2 md:items-center">
               <div className="space-y-6">
                 <div className="relative aspect-square w-full overflow-hidden rounded-lg">
@@ -62,9 +65,6 @@ export default function ServicesPage() {
                     className="object-cover"
                   />
                 </div>
-                <h2 className="text-3xl md:text-4xl font-light tracking-wider text-gray-900 dark:text-gray-100">
-                  Value Creation &raquo;
-                </h2>
               </div>
               <ul className="space-y-6">
                 {valueCreationSegments.map((segment) => (
