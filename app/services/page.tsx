@@ -151,7 +151,7 @@ export default function ServicesPage() {
                 {privateCapitalPortfolio.map((item) => (
                   <Card
                     key={item.title}
-                    className="group flex flex-col border-border bg-card transition-all duration-300 hover:-translate-y-1 hover:border-brand/40 hover:shadow-lg hover:shadow-brand/5"
+                    className="group flex flex-col border-border bg-card transition-all duration-300 hover:-translate-y-1 hover:border-brand/40 hover:shadow-lg hover:shadow-brand/5 text-center"
                   >
                     <CardHeader>
                       <CardTitle className="font-serif text-lg font-medium leading-snug text-foreground">
