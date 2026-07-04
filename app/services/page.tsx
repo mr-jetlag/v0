@@ -5,7 +5,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { SiteHeader } from "@/components/site-header"
 
 const advisoryPortfolio = [
-  { title: "Equity Management Platform", description: "Advisory partner to an equity management platform." },
+  { title: "Equity Management Platform", description: "A fast-growing global equity management platform looking for US entry and expansion of its offering into fund administration software and services. Agos provides strategic / CxO advisory, product and GTM expertise. Client secured funding from Citi and Schwab for its “0 to 1” US and Fund Admin strategy." },
   {
     title: "Asset-Based Finance SaaS",
     description: "A European ABF SaaS platform involved in specialty finance and securitisation markets. Agos transformed their product strategy and go-to- market messaging, culminating in a successful entry into the US market and $15M of Series A funding from Blackstone Ventures and FINTOP Capital.",
