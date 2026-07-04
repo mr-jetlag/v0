@@ -5,15 +5,15 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { SiteHeader } from "@/components/site-header"
 
 const advisoryPortfolio = [
-  { title: "Equity Management Platform", description: "Advisory partner to an equity management platform." },
+  { title: "Equity Management Platform", description: "A fast-growing global equity management platform looking for US entry and expansion of its offering into fund administration software and services. Agos provides strategic / CxO advisory, product and GTM expertise. Client secured funding from Citi and Schwab for its “0 to 1” US and Fund Admin strategy." },
   {
-    title: "Asset-Based Finance SaaS Platform",
-    description: "Operating and advisory support for an asset-based finance SaaS platform.",
+    title: "Asset-Based Finance SaaS",
+    description: "A European ABF SaaS platform involved in specialty finance and securitisation markets. Agos transformed their product strategy and go-to- market messaging, culminating in a successful entry into the US market and $15M of Series A funding from Blackstone Ventures and FINTOP Capital.",
   },
-  { title: "Digital Transformation Consultancy", description: "Advisory to a digital transformation consultancy." },
+  { title: "Digital Transformation Consultancy", description: "A specialist in Capital Markets with over $1Tn in client assets globally. Agos partnership enabled private markets training for over 100 consultants; and also established successful fintech partnership channels resulting in $3m of consulting revenue to sovereign wealth and PE firms." },
   {
     title: "Government Owned & Controlled Corporation (GOCC)",
-    description: "Strategic advisory to a government owned and controlled corporation.",
+    description: "A government owned and controlled corporation (GOCC) creating a secondary mortgage market for increased liquidity and affordability of homes in the Philippines. Provided in depth analysis of private funding options and analysis of information systems and processes at scale.",
   },
 ]
 
@@ -26,9 +26,9 @@ const valueCreationSegments = [
 ]
 
 const privateCapitalPortfolio = [
-  { title: "Front Office Credit Startup", description: "An early-stage front office credit startup." },
-  { title: "Deep-Tech Visual AI Startup", description: "A deep-tech startup commercialising visual AI." },
-  { title: "AI-Native Semiconductor Design Company", description: "An AI-native semiconductor design company." },
+  { title: "Front Office Credit Portfolio Managment ", description: "A US-based front office credit startup founded as the spiritual successor to category leader Black Mountain Systems by experienced alumni and former credit traders. Provided early-stage F&F capital. Achieved 2.66x MOIC (48% IRR) at exit through a strategic acquisition by Octus." },
+  { title: "Authenticity and Content Protection Startup", description: "A deep-tech visual AI startup that provides secure, enterprise-grade fraud and fake detection for BFSIs, governments and enterprises. Provided angel funding and CxO leadership. Commercial traction achieved in less than 13 months from inception, securing F&F and SAFE funding at a $10m floor." },
+  { title: "AI-Native Semiconductor Design Company", description: "An AI native semiconductor design company that leverages intent-based HDL generation and scalable idea-to- hardware for chip designers. Early-stage advisory leading to an A$25m acquisition by an ASX-listed vehicle. Equity value realised within 12 months of engagement. "},
 ]
 
 export default function ServicesPage() {
@@ -105,7 +105,7 @@ export default function ServicesPage() {
                 {advisoryPortfolio.map((item) => (
                   <Card
                     key={item.title}
-                    className="group flex flex-col border-border bg-card transition-all duration-300 hover:-translate-y-1 hover:border-brand/40 hover:shadow-lg hover:shadow-brand/5"
+                    className="group flex flex-col border-border bg-card transition-all duration-300 hover:-translate-y-1 hover:border-brand/40 hover:shadow-lg hover:shadow-brand/5 text-center"
                   >
                     <CardHeader>
                       <CardTitle className="font-serif text-lg font-medium leading-snug text-foreground">
@@ -151,7 +151,7 @@ export default function ServicesPage() {
                 {privateCapitalPortfolio.map((item) => (
                   <Card
                     key={item.title}
-                    className="group flex flex-col border-border bg-card transition-all duration-300 hover:-translate-y-1 hover:border-brand/40 hover:shadow-lg hover:shadow-brand/5"
+                    className="group flex flex-col border-border bg-card transition-all duration-300 hover:-translate-y-1 hover:border-brand/40 hover:shadow-lg hover:shadow-brand/5 text-center"
                   >
                     <CardHeader>
                       <CardTitle className="font-serif text-lg font-medium leading-snug text-foreground">
