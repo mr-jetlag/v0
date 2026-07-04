@@ -7,13 +7,13 @@ import { SiteHeader } from "@/components/site-header"
 const advisoryPortfolio = [
   { title: "Equity Management Platform", description: "Advisory partner to an equity management platform." },
   {
-    title: "Asset-Based Finance SaaS Platform",
-    description: "Operating and advisory support for an asset-based finance SaaS platform.",
+    title: "Asset-Based Finance SaaS",
+    description: "A European ABF SaaS platform involved in specialty finance and securitisation markets. Agos transformed their product strategy and go-to- market messaging, culminating in a successful entry into the US market and $15M of Series A funding from Blackstone Ventures and FINTOP Capital.",
   },
-  { title: "Digital Transformation Consultancy", description: "Advisory to a digital transformation consultancy." },
+  { title: "Digital Transformation Consultancy", description: "A specialist in Capital Markets with over $1Tn in client assets globally. Agos partnership enabled private markets training for over 100 consultants; and also established successful fintech partnership channels resulting in $3m of consulting revenue to sovereign wealth and PE firms." },
   {
     title: "Government Owned & Controlled Corporation (GOCC)",
-    description: "Strategic advisory to a government owned and controlled corporation.",
+    description: "A government owned and controlled corporation (GOCC) creating a secondary mortgage market for increased liquidity and affordability of homes in the Philippines. Provided in depth analysis of private funding options and analysis of information systems and processes at scale.",
   },
 ]
 
@@ -26,9 +26,9 @@ const valueCreationSegments = [
 ]
 
 const privateCapitalPortfolio = [
-  { title: "Front Office Credit Startup", description: "An early-stage front office credit startup." },
-  { title: "Deep-Tech Visual AI Startup", description: "A deep-tech startup commercialising visual AI." },
-  { title: "AI-Native Semiconductor Design Company", description: "An AI-native semiconductor design company." },
+  { title: "Front Office Credit AI", description: "A US-based front office credit startup founded as the spiritual successor to category leader Black Mountain Systems by experienced alumni and former credit traders." },
+  { title: "Authenticity and Content Protection Startup", description: "A deep-tech visual AI startup that provides secure, enterprise-grade fraud and fake detection for BFSIs, governments and enterprises." },
+  { title: "AI-Native Semiconductor Design Company", description: "An AI –native semiconductor design company that leverages intent-based HDL generation and scalable idea-to- hardware for chip designers." },
 ]
 
 export default function ServicesPage() {
