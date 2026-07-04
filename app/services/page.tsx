@@ -28,7 +28,7 @@ const valueCreationSegments = [
 const privateCapitalPortfolio = [
   { title: "Front Office Credit AI", description: "A US-based front office credit startup founded as the spiritual successor to category leader Black Mountain Systems by experienced alumni and former credit traders." },
   { title: "Authenticity and Content Protection Startup", description: "A deep-tech visual AI startup that provides secure, enterprise-grade fraud and fake detection for BFSIs, governments and enterprises." },
-  { title: "AI-Native Semiconductor Design Company", description: "An AI native semiconductor design company that leverages intent-based HDL generation and scalable idea-to- hardware for chip designers. <br>                        Early-stage advisory leading to an A$25m acquisition by an ASX-listed vehicle. Equity value realised within 12 months of engagement. "},
+  { title: "AI-Native Semiconductor Design Company", description: "An AI native semiconductor design company that leverages intent-based HDL generation and scalable idea-to- hardware for chip designers." <br> "Early-stage advisory leading to an A$25m acquisition by an ASX-listed vehicle. Equity value realised within 12 months of engagement. "},
 ]
 
 export default function ServicesPage() {
