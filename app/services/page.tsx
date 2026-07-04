@@ -26,7 +26,7 @@ const valueCreationSegments = [
 ]
 
 const privateCapitalPortfolio = [
-  { title: "Front Office Credit AI Startup", description: "A US-based front office credit startup founded as the spiritual successor to category leader Black Mountain Systems by experienced alumni and former credit traders. Provided early-stage F&F capital. Achieved 2.66x MOIC (48% IRR) at exit through a strategic acquisition by Octus." },
+  { title: "Front Office Credit Portfolio Managment ", description: "A US-based front office credit startup founded as the spiritual successor to category leader Black Mountain Systems by experienced alumni and former credit traders. Provided early-stage F&F capital. Achieved 2.66x MOIC (48% IRR) at exit through a strategic acquisition by Octus." },
   { title: "Authenticity and Content Protection Startup", description: "A deep-tech visual AI startup that provides secure, enterprise-grade fraud and fake detection for BFSIs, governments and enterprises. Provided angel funding and CxO leadership. Commercial traction achieved in less than 13 months from inception, securing F&F and SAFE funding at a $10m floor." },
   { title: "AI-Native Semiconductor Design Company", description: "An AI native semiconductor design company that leverages intent-based HDL generation and scalable idea-to- hardware for chip designers. Early-stage advisory leading to an A$25m acquisition by an ASX-listed vehicle. Equity value realised within 12 months of engagement. "},
 ]
