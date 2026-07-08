@@ -7,27 +7,23 @@ import { SiteHeader } from "@/components/site-header"
 const advisoryPortfolio = [
   {
     title: "Equity Management Platform",
-    logoSrc: "/images/equity-management-platform-logo.png",
-    description:
-      "A fast-growing global equity management platform looking for US entry and expansion of its offering into fund administration software and services. Agos provides strategic / CxO advisory, product and GTM expertise. Client secured funding from Citi and Schwab for its “0 to 1” US and Fund Admin strategy.",
+    logoSrc: "/equity-management-platform-logo.png",
+    description: "A fast-growing global equity management platform looking for US entry and expansion of its offering into fund administration software and services. Agos provides strategic / CxO advisory, product and GTM expertise. Client secured funding from Citi and Schwab for its “0 to 1” US and Fund Admin strategy.",
   },
   {
     title: "Asset-Based Finance SaaS",
-    logoSrc: "/images/asset-based-finance-saas-logo.png",
-    description:
-      "A European ABF SaaS platform involved in specialty finance and securitisation markets. Agos transformed their product strategy and go-to- market messaging, culminating in a successful entry into the US market and $15M of Series A funding from Blackstone Ventures and FINTOP Capital.",
+    logoSrc: "/asset-based-finance-saas-logo.png",
+    description: "A European ABF SaaS platform involved in specialty finance and securitisation markets. Agos transformed their product strategy and go-to- market messaging, culminating in a successful entry into the US market and $15M of Series A funding from Blackstone Ventures and FINTOP Capital.",
   },
   {
     title: "Digital Transformation Consultancy",
-    logoSrc: "/images/digital-transformation-consultancy-logo.png",
-    description:
-      "A specialist in Capital Markets with over $1Tn in client assets globally. Agos partnership enabled private markets training for over 100 consultants; and also established successful fintech partnership channels resulting in $3m of consulting revenue to sovereign wealth and PE firms.",
+    logoSrc: "/digital-transformation-consultancy-logo.png",
+    description: "A specialist in Capital Markets with over $1Tn in client assets globally. Agos partnership enabled private markets training for over 100 consultants; and also established successful fintech partnership channels resulting in $3m of consulting revenue to sovereign wealth and PE firms.",
   },
   {
     title: "Government Owned & Controlled Corporation (GOCC)",
-    logoSrc: "/images/gocc-logo.png",
-    description:
-      "A government owned and controlled corporation (GOCC) creating a secondary mortgage market for increased liquidity and affordability of homes in the Philippines. Provided in depth analysis of private funding options and analysis of information systems and processes at scale.",
+    logoSrc: "/gocc-logo.png",
+    description: "A government owned and controlled corporation (GOCC) creating a secondary mortgage market for increased liquidity and affordability of homes in the Philippines. Provided in depth analysis of private funding options and analysis of information systems and processes at scale.",
   },
 ]
 
@@ -42,21 +38,18 @@ const valueCreationSegments = [
 const privateCapitalPortfolio = [
   {
     title: "Front Office Credit Portfolio Managment ",
-    logoSrc: "/images/front-office-credit-logo.png.png",
-    description:
-      "A US-based front office credit startup founded as the spiritual successor to category leader Black Mountain Systems by experienced alumni and former credit traders. Provided early-stage F&F capital. Achieved 2.66x MOIC (48% IRR) at exit through a strategic acquisition by Octus.",
+    logoSrc: "/front-office-credit-logo.png.png",
+    description: "A US-based front office credit startup founded as the spiritual successor to category leader Black Mountain Systems by experienced alumni and former credit traders. Provided early-stage F&F capital. Achieved 2.66x MOIC (48% IRR) at exit through a strategic acquisition by Octus.",
   },
   {
     title: "Authenticity and Content Protection Startup",
-    logoSrc: "/images/content-protection-logo.png",
-    description:
-      "A deep-tech visual AI startup that provides secure, enterprise-grade fraud and fake detection for BFSIs, governments and enterprises. Provided angel funding and CxO leadership. Commercial traction achieved in less than 13 months from inception, securing F&F and SAFE funding at a $10m floor.",
+    logoSrc: "/content-protection-logo.png",
+    description: "A deep-tech visual AI startup that provides secure, enterprise-grade fraud and fake detection for BFSIs, governments and enterprises. Provided angel funding and CxO leadership. Commercial traction achieved in less than 13 months from inception, securing F&F and SAFE funding at a $10m floor.",
   },
   {
     title: "AI-Native Semiconductor Design Company",
-    logoSrc: "/images/semiconductor-design-logo.png",
-    description:
-      "An AI native semiconductor design company that leverages intent-based HDL generation and scalable idea-to- hardware for chip designers. Early-stage advisory leading to an A$25m acquisition by an ASX-listed vehicle. Equity value realised within 12 months of engagement.",
+    logoSrc: "/semiconductor-design-logo.png",
+    description: "An AI native semiconductor design company that leverages intent-based HDL generation and scalable idea-to- hardware for chip designers. Early-stage advisory leading to an A$25m acquisition by an ASX-listed vehicle. Equity value realised within 12 months of engagement.",
   },
 ]
 
