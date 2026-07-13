@@ -5,14 +5,24 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { SiteHeader } from "@/components/site-header"
 
 const advisoryPortfolio = [
-  { title: "Equity Management Platform", description: "A fast-growing global equity management platform looking for US entry and expansion of its offering into fund administration software and services. Agos provides strategic / CxO advisory, product and GTM expertise. Client secured funding from Citi and Schwab for its “0 to 1” US and Fund Admin strategy." },
+  {
+    title: "Equity Management Platform",
+    logoSrc: "/equity-management-platform-logo.png",
+    description: "A fast-growing global equity management platform looking for US entry and expansion of its offering into fund administration software and services. Agos provides strategic / CxO advisory, product and GTM expertise. Client secured funding from Citi and Schwab for its “0 to 1” US and Fund Admin strategy.",
+  },
   {
     title: "Asset-Based Finance SaaS",
+    logoSrc: "/asset-based-finance-saas-logo.png",
     description: "A European ABF SaaS platform involved in specialty finance and securitisation markets. Agos transformed their product strategy and go-to- market messaging, culminating in a successful entry into the US market and $15M of Series A funding from Blackstone Ventures and FINTOP Capital.",
   },
-  { title: "Digital Transformation Consultancy", description: "A specialist in Capital Markets with over $1Tn in client assets globally. Agos partnership enabled private markets training for over 100 consultants; and also established successful fintech partnership channels resulting in $3m of consulting revenue to sovereign wealth and PE firms." },
+  {
+    title: "Digital Transformation Consultancy",
+    logoSrc: "/digital-transformation-consultancy-logo.png",
+    description: "A specialist in Capital Markets with over $1Tn in client assets globally. Agos partnership enabled private markets training for over 100 consultants; and also established successful fintech partnership channels resulting in $3m of consulting revenue to sovereign wealth and PE firms.",
+  },
   {
     title: "Government Owned & Controlled Corporation (GOCC)",
+    logoSrc: "/gocc-logo.png",
     description: "A government owned and controlled corporation (GOCC) creating a secondary mortgage market for increased liquidity and affordability of homes in the Philippines. Provided in depth analysis of private funding options and analysis of information systems and processes at scale.",
   },
 ]
@@ -26,10 +36,48 @@ const valueCreationSegments = [
 ]
 
 const privateCapitalPortfolio = [
-  { title: "Front Office Credit Portfolio Managment ", description: "A US-based front office credit startup founded as the spiritual successor to category leader Black Mountain Systems by experienced alumni and former credit traders. Provided early-stage F&F capital. Achieved 2.66x MOIC (48% IRR) at exit through a strategic acquisition by Octus." },
-  { title: "Authenticity and Content Protection Startup", description: "A deep-tech visual AI startup that provides secure, enterprise-grade fraud and fake detection for BFSIs, governments and enterprises. Provided angel funding and CxO leadership. Commercial traction achieved in less than 13 months from inception, securing F&F and SAFE funding at a $10m floor." },
-  { title: "AI-Native Semiconductor Design Company", description: "An AI native semiconductor design company that leverages intent-based HDL generation and scalable idea-to- hardware for chip designers. Early-stage advisory leading to an A$25m acquisition by an ASX-listed vehicle. Equity value realised within 12 months of engagement. "},
+  {
+    title: "Front Office Credit Portfolio Managment ",
+    logoSrc: "/front-office-credit-logo.png.png",
+    description: "A US-based front office credit startup founded as the spiritual successor to category leader Black Mountain Systems by experienced alumni and former credit traders. Provided early-stage F&F capital. Achieved 2.66x MOIC (48% IRR) at exit through a strategic acquisition by Octus.",
+  },
+  {
+    title: "Authenticity and Content Protection Startup",
+    logoSrc: "/content-protection-logo.png",
+    description: "A deep-tech visual AI startup that provides secure, enterprise-grade fraud and fake detection for BFSIs, governments and enterprises. Provided angel funding and CxO leadership. Commercial traction achieved in less than 13 months from inception, securing F&F and SAFE funding at a $10m floor.",
+  },
+  {
+    title: "AI-Native Semiconductor Design Company",
+    logoSrc: "/semiconductor-design-logo.png",
+    description: "An AI native semiconductor design company that leverages intent-based HDL generation and scalable idea-to- hardware for chip designers. Early-stage advisory leading to an A$25m acquisition by an ASX-listed vehicle. Equity value realised within 12 months of engagement.",
+  },
 ]
+
+function PortfolioCard({
+  title,
+  logoSrc,
+  description,
+}: {
+  title: string
+  logoSrc: string
+  description: string
+}) {
+  return (
+    <Card className="group flex flex-col border-border bg-card transition-all duration-300 hover:-translate-y-1 hover:border-brand/40 hover:shadow-lg hover:shadow-brand/5 text-center">
+      <CardHeader className="items-center gap-5">
+        <div className="relative h-20 w-28">
+          <Image src={logoSrc} alt={`${title} logo`} fill className="object-contain" />
+        </div>
+        <CardTitle className="font-serif text-lg font-medium leading-snug text-foreground">
+          {title}
+        </CardTitle>
+      </CardHeader>
+      <CardContent className="text-muted-foreground leading-relaxed">
+        <p className="text-sm">{description}</p>
+      </CardContent>
+    </Card>
+  )
+}
 
 export default function ServicesPage() {
   return (
@@ -101,23 +149,13 @@ export default function ServicesPage() {
                   <h2 className="font-serif text-3xl md:text-4xl font-light tracking-wide text-white">Advisory</h2>
                 </div>
               </div>
+
               <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
                 {advisoryPortfolio.map((item) => (
-                  <Card
-                    key={item.title}
-                    className="group flex flex-col border-border bg-card transition-all duration-300 hover:-translate-y-1 hover:border-brand/40 hover:shadow-lg hover:shadow-brand/5 text-center"
-                  >
-                    <CardHeader>
-                      <CardTitle className="font-serif text-lg font-medium leading-snug text-foreground">
-                        {item.title}
-                      </CardTitle>
-                    </CardHeader>
-                    <CardContent className="text-muted-foreground leading-relaxed">
-                      <p className="text-sm">{item.description}</p>
-                    </CardContent>
-                  </Card>
+                  <PortfolioCard key={item.title} {...item} />
                 ))}
               </div>
+
               <p className="text-center text-muted-foreground max-w-2xl mx-auto text-pretty">
                 We operate or advise companies where our involvement accelerates outcomes and provides immediate value.
               </p>
@@ -144,26 +182,17 @@ export default function ServicesPage() {
                   </h2>
                 </div>
               </div>
+
               <p className="text-center text-muted-foreground max-w-2xl mx-auto text-pretty">
                 Our approach is deeply personal, always private, and focused on win-win outcomes.
               </p>
+
               <div className="grid gap-6 sm:grid-cols-3">
                 {privateCapitalPortfolio.map((item) => (
-                  <Card
-                    key={item.title}
-                    className="group flex flex-col border-border bg-card transition-all duration-300 hover:-translate-y-1 hover:border-brand/40 hover:shadow-lg hover:shadow-brand/5 text-center"
-                  >
-                    <CardHeader>
-                      <CardTitle className="font-serif text-lg font-medium leading-snug text-foreground">
-                        {item.title}
-                      </CardTitle>
-                    </CardHeader>
-                    <CardContent className="text-muted-foreground leading-relaxed">
-                      <p className="text-sm">{item.description}</p>
-                    </CardContent>
-                  </Card>
+                  <PortfolioCard key={item.title} {...item} />
                 ))}
               </div>
+
               <p className="text-center text-muted-foreground max-w-2xl mx-auto text-pretty">
                 We only invest where our direct experience translates into real value for Agos investors.
               </p>
@@ -171,6 +200,7 @@ export default function ServicesPage() {
           </div>
         </section>
       </main>
+
       <footer className="border-t border-border bg-background">
         <div className="container mx-auto px-4 py-10 flex flex-col sm:flex-row items-center justify-between gap-4">
           <div className="flex items-center gap-2">
