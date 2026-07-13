@@ -11,7 +11,7 @@ const advisoryPortfolio = [
     description: "A fast-growing global equity management platform looking for US entry and expansion of its offering into fund administration software and services. Agos provides strategic / CxO advisory, product and GTM expertise. Client secured funding from Citi and Schwab for its “0 to 1” US and Fund Admin strategy.",
   },
   {
-    title: "Asset-Based Finance SaaS",
+    title: "Asset-Based Finance SaaS Platform",
     logoSrc: "/asset-based-finance-saas-logo.png",
     description: "A European ABF SaaS platform involved in specialty finance and securitisation markets. Agos transformed their product strategy and go-to- market messaging, culminating in a successful entry into the US market and $15M of Series A funding from Blackstone Ventures and FINTOP Capital.",
   },
@@ -21,7 +21,7 @@ const advisoryPortfolio = [
     description: "A specialist in Capital Markets with over $1Tn in client assets globally. Agos partnership enabled private markets training for over 100 consultants; and also established successful fintech partnership channels resulting in $3m of consulting revenue to sovereign wealth and PE firms.",
   },
   {
-    title: "Government Owned & Controlled Corporation (GOCC)",
+    title: "Government Owned & Controlled Corp.",
     logoSrc: "/gocc-logo.png",
     description: "A government owned and controlled corporation (GOCC) creating a secondary mortgage market for increased liquidity and affordability of homes in the Philippines. Provided in depth analysis of private funding options and analysis of information systems and processes at scale.",
   },
