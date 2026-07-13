@@ -21,7 +21,7 @@ const advisoryPortfolio = [
     description: "A specialist in Capital Markets with over $1Tn in client assets globally. Agos partnership enabled private markets training for over 100 consultants; and also established successful fintech partnership channels resulting in $3m of consulting revenue to sovereign wealth and PE firms.",
   },
   {
-    title: "Government Owned & Controlled Corp.",
+    title: "Government Owned & Controlled Corp",
     logoSrc: "/gocc-logo.png",
     description: "A government owned and controlled corporation (GOCC) creating a secondary mortgage market for increased liquidity and affordability of homes in the Philippines. Provided in depth analysis of private funding options and analysis of information systems and processes at scale.",
   },
